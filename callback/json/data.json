@@ -1,0 +1,30 @@
+[ 
+   {
+      "nama" : "Andi Sanjaya",
+      "nim" : "09847879889",
+      "alamat" : "Bogor",
+      "jurusan" : "informatika",
+      "smester" : "genap"
+   },
+   {
+      "nama" : "Adam maulana",
+      "nim" : "03847874555",
+      "alamat" : "Depok",
+      "jurusan" : "informatika",
+      "smester" : "ganjil"
+   }, 
+   {
+      "nama" : "Riansyah",
+      "nim" : "09989733322",
+      "alamat" : "Jakarta",
+      "jurusan" : "management",
+      "smester" : "genap"
+   },
+   {
+      "nama" : "Hermawan",
+      "nim" : "84734764647",
+      "alamat" : "Bogor",
+      "jurusan" : "Kimia",
+      "smester" : "ganjil"
+   }
+]

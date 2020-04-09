@@ -1,0 +1,495 @@
+                                       * JAVASCRIPT BASIC *
+Materi Javascript
+# Modul A
+   1). 6 tipe data pada javascrip
+         * Number  
+         - angka tanpa desimal akurat sampai 15 digit
+         - angka desimal di tandai dengan (titik)
+         - bilangan exponen, contoh :
+                  123e5 // 12300000
+                  123e-5 // 0.00123
+         - bilangan negatif
+         * string  : 
+         * boolean
+         * object 
+         * function 
+         * Undified 
+   2). Operator pada javascript 
+         - Aritmatika / matematika (  *, /, +, - ) dan ( % / modulus = sisa bagi ) = binary
+         - penugasan / asigment = binary ( =, *=, /=, +=, -=, %= )
+         - perbandingan / comparison / comparasi = binary
+               ( == untuk membandingkan nilai yang sama )
+               ( != tidak sama dengan dalam nilai yg sama )
+               ( === untuk membandingkan nilai dan sekaligus tipe data )
+               ( !== tidak sama dengan dalam nilai yang sama sekaligus tipe data )
+               ( > lebih besar dari )
+               ( < lebih kecil dari )
+               ( >= lebih besar sama dengan )
+               ( <= lebih kecil sama dengan )
+         # hasil operator perbandingan adalah boolean
+         - logika = binary 
+          ( && and )
+          ( || or )
+          ( ! not )
+         - string  = binary
+         - condisional = ternary
+         - typeof = unary 
+            contoh :
+            typeof (10)                typeof ('10')                type (true)
+            number                     'string'                     boolean
+         # typeof digunakan untuk mengetahui jenis tipedata
+         # Operator binary adalah operator yang memiliki dua operand
+           ( operand1 operator operand2 )
+         # Operator unary hanya membutuhkan satu operand
+           ( operator operand ) / ( operand operator )
+         # Operator ternary membutuhkan tiga operand
+   3). String 
+         # tipe data string dalam javascript di gunakan untuk mempresentasikan tekstual ( plain text )
+           untuk membuat string kita dapat menngunakan ('') atau ("")
+           perbedaan :
+         - ("") memiliki tingat string lebih besar dari ('')
+         - ("") bisa digunakan dalam string ('')
+         # escape caracter 
+           escape karakter digunakan untuk melewati tanda (') di dalam string 
+           escape caracter menggunakan backslash (\)
+           contoh :
+           'ini adalah hari jum'at' ( maka di tulis menjadi ) 'ini hari jum\'at'
+         # concatanation / concat
+           contoh concat pada variable javascrip :
+           operator aritmatika pada variable string                      
+           a = "mobil"
+           b = "mewah" 
+           a + b = "mobilmeawah"
+           operator aritmatika dengan concat pada string menggunakan concat 
+           a = "mobil"
+           b = "mewah" 
+           a + "" + b = "mobil mewah" 
+         # Sting length
+           digunakan untuk menghitung jumlah karakter pada string 
+           contoh :
+           "andi sanjaya".length             // spasi masuk dalam hitungan pada string
+           ( maka hasilnya adalah ) = 12   
+         # Perbandingan string 
+           digunakan menggunakan operator perbandingan untuk membandingkan caracter
+           pada string dengan hasil boolean.
+           contoh : 
+           "andi" == "andi"
+           ( maka hasilnya ) = true
+           "Andi" == "andi"
+           ( maka hasilnya ) = false        
+           // karna pada 2 sring tersebut memiliki karakter yang berbeda yaitu huruf ( A dan a ) 
+   4.) Boolean   
+         biasanya di gunakan pada statment pengkondisian untuk menentukan aksi yang berbeda dan
+         mengatur alur kendali pada stiap program 
+         boolean memiliki 2 buah nilai yaitu :
+         true dan false / 1 dan 0
+   5.) Variable 
+         variable adalah sebuah tempat atau wadah yang memiliki nama yang digunakan untuk 
+         menyimpan nilai.
+         # deklarasi ( mendaftarkan variable ke dalam lingkup yang sesuai )
+         # initialisasi ( menyediakan memory untuk variable )
+         # asigment ( menetapkan nilai yang spesifik kedalam variable )
+         - variable pada javascrip ( var, let, const )
+         contoh :
+           var x ; // proses deklarasi dan initialisasi
+           x = 10 ; // proses asigment
+         - contoh penulisan variable dalam jumlah banyak 
+            var nama ;
+            var umur ;
+            var kota ;
+
+            nama = "andi"
+            umur = 28
+            kota = "bogor"
+         - contoh penulisan variable dengan sorthand 
+            var nama ; "andi"
+                umur ; 28
+                kota ; "bogor"
+         - contoh penulisan variable camel case 
+            var namaPanjangVariable ; 
+
+      # Perbedaan var, let dan const :
+        - var         : merupakan sebuah variable global yang tidak memiliki block scope,
+                        karna javascript tidak memiliki block scope tapi memiliki function scope,
+                        ( note : var tidak dapat di eksekusi dari luar function jika var tersebut 
+                          berada di dalam function ).
+        - let         : merupakan sebuah variable yang memiliki konsep function scope 
+                        ( variable let hanya dapat di eksekusi di dalam scope itu sendiri )
+        - conts       : merupakan sebuah variable yang meminimalisir prubahan state
+                        sehingga nilai / value pada variable conts tidak dapat  di timpa
+                        dengan nama atau variable yang sama.
+        contoh penggunaan ke tiga variable diatas terdapat pada file variable.html & variable.js 
+        
+
+# Modul B 
+  1). Penulisan Javascript pada document html dengan 2 cara
+      - internal : yaitu penulisan javascript secara langsung di dalam body html
+      - external : menghubungkan file javascript pada file yang berbeda, sama sperti 
+        menghubungkan file css external pada file html. contoh pada file modul_2.html
+        berikut ini adalah script unuk menghubungkan file javascript external 
+        <script src="namafile.js"></script> 
+  2). Popup box pada javascript
+        Popup box adalah sebuah window kecil pada browser yang kita munculkan sebagai
+        interaksi agar user dapat berdialog dengan web
+        # 3 buah popup box pada javascript :
+          - alert : pesan singkat dengan menampilkan window pada browser 
+            contoh penulisan pada alert :
+            alert ("hello word");
+            alert = function popup
+            ("hello word"); = parameter
+          # jika kita memberikan popup lebih dari 1 pada halaman browser 
+            maka secara otomatis browser akan memberikan opsi pemberitahuan kepada pengguna
+            browser.
+          - prompt : pesan dengan menampilan windows pada browser yang memiliki
+            text box sebagai inputan untuk user 
+            contoh penulisan propt :
+            var nama = prompt ("masukan nama : ");
+            // apapun inputan nilai yang dikembalikan adalah apapun yang user input pada ketikannya. 
+            // untuk menampilakan inputan nama pada popup prompt maka kita bisa memanggil variable nama
+          - confirm : pesan dengan menampilkan windows pada browser yang memiliki
+            tombol confirm dan cancel sebagai interaksi konfirmasi kepada user.
+            contoh penggunaan confirm pada file popup.html dan popup.js
+  3). Controlflow pada javascipt
+        controlflow adalah alur kendali dari sebuah program
+        # apabila program kita memiliki lebih dari satu statment, maka statement tersebut akan 
+          di eksekusi dari atas kebawah atau dari kiri ke kanan.
+        # controlflow pada javascript meliputi pengulangan dan pengkondisian 
+  4). Loop / Looping atau pengulangan ( iteration ) pada javascript 
+        Loop adalah sebuah konsep untuk mengerjakan atau mengeksekusi sebuah statment yang sama 
+        lebih dari satu kali atau berulang. 
+        ada beberapa function untuk melakukan pengulangan pada javascript diantaranya yaitu :
+        - for : contoh pada file for.html dan for.js
+        - while : contoh pada file while.html dan while.js
+        - foreach : pengulangan pada javascript yang di rekomendasikan untuk melalukan pengulangan pada array
+        - for of : sebuah looping yang bisa mengulang dan menelusuri object object iterable
+        - for in : sebuah looping yang dapat mengulang enumerable ( sebuah property pada object ).
+  5). Pengkondisian atau Percabangan pada javascript
+        pengkondisian adalah sebuah keadaan dimana program kita untuk memilih mengeksekusi 
+        statment yang berbeda berdasarkan kondisi yang diberikan
+        - if.. else : contoh pada file if_else.html dan if_else.js
+        - if.. else if.. else : contoh pada file else_if.html dan else_if.js
+        - switch : contoh pada file switch.html dan swich.js
+
+# MODUL C
+  1). Function pada javascript 
+      function adalah kunci utama pada javascript yang membuat javascript sangat powerfull
+      definisi function pada javascript :
+        - Sebuah sub program atau sub routime yang dapat di panggil di bagian lain pada program
+        - merupakan struktur dasar yang dibuat oleh javascript 
+        - disebut juga sebagai prosedur ( kumpulan statement untuk melakukan tugas atau menghitung nilai )
+        - untuk dapat menggunakannya kita harus membuat terlebih dahulu function tersebut lalu memanggilnya.
+        - termasuk kedalam first class object
+      # category function 
+        - build in function : fungsi yang sudah di sediakan atau di buat oleh javascript
+        - user difined function : 
+            + fungsi yang kita buat sendiri
+            + menggunakan keyword function 
+            + nama function optional 
+            + parameter / argument
+                - disimpan didalam argument
+                - boleh ada atau tidak, jika ada boleh lebih dari satu
+                - jika lebih dari satu dipisahkan dengan koma ( , )
+            + function body dibungkus dengan { } 
+            + dapat mengembalikan nilai ( return value ) atau tidak 
+  2). Function Declaration vs Function Expression
+        - function declaration :
+          : lebih flexibel ( dapat di tulis dimanapun ) karena kosep hoisting
+          : cendrung mudah di pahami untuk pemula
+          : function dapat dipanggil terlebih dahulu lalu di deklarasikan / sebaliknya
+        - function expression 
+          : harus di definisikan terlebih dahulu sebelum memanggil function tersebut
+          : lebih powerfull - dapat dibuat sebagai closure dan dapat dibuat sebagai argument untuk function yang lain
+          : dapat dibuat sebagai IIFI ( Immediatelly Invoked Function Expression)
+      # cara membuat user defined function :
+        - dengan deklarasi / declaration function 
+          contoh penulisan function declaration :
+                  function jumlahDuaBilangan(a,b) {
+                    var total ;
+                    total =  a + b ;
+
+                    return total ;
+                  }
+
+        - dengan expresi / expresion function 
+          contoh function expresion 
+                  var jumlahDuaBilangan = function ( a,b ) {
+                    var total ;
+                    total = a + b ;
+
+                    return total ;
+                  }
+        contoh function pada file function_1.js dan function_1.html
+  3). Parameter & Argument 
+        - parameter adalah variable yang ditulis di dalam kurung pada saat function dibuat
+          di gunakan untuk menampung nilai yang dikirimkan saat function dipanggil 
+        - argument adalah nilai yang dikirimkan untuk parameter saat function dipanggil
+  4). Refactoring / konsep refactoring 
+        - Sebuah proses untuk mengubah kode agar lebih baik tanpa mengubah functionalitasnya 
+        - Refactoring melingkupi :
+          : Readibility / keterbacaan
+          : Dry ( do not repeat yourself ) atau keterkaitan dengan duplikasi code
+          : testability 
+          : performance
+          : maintability 
+        Contoh refactoring pada file function_1.js 
+        - perubahan code function pada penjumlahan dua buah kubus file function_1.js 
+  5). Rekursif 
+        - Sebuah function yang memanggil dirinya sendiri
+        - untuk menghentikan function tersebut kita dapat menggunkan base case 
+        contoh rekursif dalam function pada file recursif.html & recursif.js
+
+  6). Scope 
+      # Function Scope 
+        - variable yang berada di luar function dapat di eksekusi dalam function
+        - variable yang ada di dalam function tidak dapat di eksekusi di luar function
+
+# MODUL D 
+  1). Array 
+    # Devinisi Array :
+     - secara umum susunan sistematis dari objek objek yang serupa
+     - dalam bahasa programming tipe data yang digunakan untuk mendeskripsikan 
+       kumpulan element ( nilai atau variable ), yang tiap tiap elementnya memiliki index
+     - array adalah variable yang dapat menampung lebih dari satu nilai 
+    # array pada javascript 
+     - array pada javascrip dapat menampung type data yang berbeda beda 
+     - kumpulan pasangan key dan nilai / key value pair 
+     - key adalah index pada array dengan tipe interger / number yang dimulai dari 0
+     - array pada javascript bertipe object
+     - array pada javascript memiliki function atau method length untuk menghitung 
+       jumlah element di dalamnya
+     - element pada javascript memiliki tipe data yang berbeda 
+
+       contoh penulisan array pada javascript :
+       var hari = ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'] ;
+    # Fungsi Array :
+     - mempermudah pengelolaan nilai/value/data saat penelusuran / pencarian 
+     - manajemen memori
+  2). Manipulasi array :
+     - menambah elemen pada array 
+     - menghapus elemen pada array 
+     - menampilkan seluruh isi array 
+    # method mothod array pada javascript 
+     - length                 : untuk menampilkan jumlah element array untuk
+     - join                   : untuk melakukan join pada array 
+     - push                   : untuk menambahkan element array di akhir array
+     - pop                    : untuk menghapus element array di akhir array 
+     - shift                  : untuk menghapus array di awal array
+     - unshift                : untuk menambahkan array di awal array
+     - slice                  : untuk mengambil beberapa bagian pada array 
+     - splice                 : untuk menambahkan/ menyisipkan elemen array di tengah tengah 
+     - foreach                : untuk melakukan looping / pengulangan pada array 
+     - map                    : untuk mengembalikan nilai pada array 
+     - sort                   : untuk menyusun array yang memiliki type data number 
+                                jika dalam array terdapat nilai puluhan maka perlu di tambahkan 
+                                // function(a-b) // dalam parameter sort dan gunakan 
+                                // return a-b ; // agar function di kembalikan pada array tersebut.
+     - filter                 : untuk memfilter element pada array 
+     - find                   : untuk mencari elemen pada array 
+     semua contoh implementasi ada pada file manipulasi_array.html & manipulasi_array.js 
+
+
+# MODUL E 
+  1). Object :
+      - Object pada javascript merupakan kumpulan nilai yang tidak memiliki index tapi memili nama
+      - function yang ada di dalam object adalah method 
+      - penulisan object menggunakan kurung kurawal {}
+      - object pada javascript terdiri dari nama object, key, dan property / value
+      - object pada  javascript boleh mengandung array sebagai property 
+      4 cara pembuatan object pada javascript :
+        - literal
+        - declaration 
+        - cunstructur ( dengan menambahkan keyword new )
+        - object.create() 
+      # object literal 
+        - object literal bersifat notasi yang hanya di buat secara manual 
+          contoh membuat object pada file 
+            - object.html & object.js
+            - latihan_object.html & latihan_object.js
+      # object function declaration 
+        - object yang di buat menggunakan function declaration,
+          dengan cara penulisan ini kita dapat memanfaatkan function declaration 
+          yang hanya di buat sekali tapi bisa membuat objectnya secara berulang ulang
+          contoh membuat object pada file 
+            - object.html & object.js
+            - latihan_object.html & latihan_object.js
+      # object contructer
+        - cara constructer ini adalah cara yang di kususkan untuk membuat object pada javascript 
+        - menggunakan keyword ( this ) untuk property dan keyword ( new ) untuk menuliskan object tersebut
+        - constructer sangat disarankan stiap kali membuat object pada javascript 
+          contoh membuat object pada file 
+            - object.html & object.js
+            - latihan_object.html & latihan_object.js
+      # object ( object.create())
+        - object.create() di buat untuk menyederhanakan code code program agar pemanggilan
+          method pada object tidak perlu di ulang ulang 
+        - memiliki parameter yang mengacu ke parent atau method objectnya 
+        contoh object.created() pada file object_create.html & object_created.js
+        contoh dari lanjutan latihan_object.html & latihan_object.js
+  2). Property dan Method pada object 
+        - Property adalah variable yang ada di dalam object
+        - method adalah function yang ada di dalam object 
+  3). This
+        - this adalah sebuah keyword special yang secara otomatis di definisikan pada
+          setiap function dan object 
+        - keyword ( this ) == keyword ( window ) / object global
+            # this pada object declaration mengembalikan object global 
+            # this pada object literal mengembalikan object yang bersangkutan
+            # this pada constructor 
+  4). Prototype
+        - prototype : pewarisan pada object ( inheritense ) 
+          prototype sudah memili function tersendiri di dalam console
+          contoh penulisan pada file prototype.html & prototype.js 
+
+
+# MODUL F 
+  1). Closure 
+      - Closures merupakan kombinasi antar function dan lingkungan leksikal ( leksikal scope )
+        di dalam function tersebut 
+      - Closures adalah sebuah function ketikan memiliki akses ke parent scopenya 
+        meskipun parent scopenya sudah selesai di eksekusi
+      - Closeures adalah sebuah function yang di kembalikan oleh function yag lain 
+        yang memiliki lingkungan saat di ciptakan
+      - Closures adalah sebuah function yang sebelumnnya sudah memiliki data, 
+        hasil dari function yang lain 
+      # Leksikal scope 
+      # Closures di gunakan untuk membuat function factories
+      # Closures di buat untuk private method 
+        contoh pada file closure.html & closure.js 
+  2). Execusion context 
+      2 fase pada execution context pada saat program di jalankan
+      : fase creation   = fase penulisan
+      : fase execution  = fase eksekusi
+        contoh pada file execution_contrxt.html & execution_context.js 
+  3). Arrow function 
+      - Bentuk lain yang lebih ringkas dari function expression 
+      contoh pada file arrow_function.html & arrow_function.js 
+  4). This Arow function 
+      contoh pada file this_arrow_function.html & this_arrow_function.js
+  5). Higher Order function
+      - function yang beroprasi pada function lain baik itu digunakan 
+        dalam Argument maupun sebagai return value.
+      - di dalam javascript function di perlakukan sebagai object
+      - function pada javascript dapat disimpan pada argumnet maupun
+        return value dari function yang lain 
+    # Filter, Map & Reduce 
+      - function filter, map dan reduce merupakan function pada array
+        yang menganut higher Order.
+      - method tersebut juga bsa di gunakan sekaligus sebagai method chaining / berantai
+      contoh pada file filter_map_reduce.html & filter_map_reduce.js 
+# MODUL G
+  1). Templete literal
+       Templete literal adalah string literal yang memungkinkan adalanya expression di dalamnya 
+        - Menggunakan Back tik (``)
+        - Multi line string : dapat membuat string lebih dari 1 baris tanpa karaker sparator
+        - Embeded Expression : dapat menuliskan ( parameter dan argument ) tanpa concat
+        - HTML fragments
+        - Expression interpolation 
+        - taget templete : Membuat tag html di dalam script 
+        contoh penulisan dan penggunaan templete literal pada file :
+        templete_literal.html & templete_literal.js
+  2). Tag Templete 
+     -  Tag templete adalah bentuk yang lebih komplek dari templete literal,
+        memungkinkan kita untuk membaca templete literal melalui sebuah function.
+        contoh penulisan dan penggunaan tag templete pada file :
+        tag_templete.html & tag_templete.js 
+  3). Distructur Assignment
+     -  Expression pada javascript yang membuat kita dapat membongkor nilai dari array 
+        atau properti dari object kedalam variable yang terpisah 
+        contoh pada file distructur_asignment.html & distructur_assignment.js
+  4). Distructur Function
+     - contoh penggunaan pada file distfructur_function.html & distructur_function.js
+  5). Iterable Object 
+     - String
+     - Array 
+     - Arguments / NodeList
+     - TypedArray
+     - Set 
+     - Map
+     - User defined iterables
+  6). Enumerable Object
+     - Enumerable Object atau bisa disebut property pada object
+  7) Spread Operator
+     - Spread Operator di representasikan dengan syntax ( ... ) titik 3.
+     - Sebuah Operator untuk mememcah ('Expand / Unpack') iterable menjadi single element
+     contoh pada file spread_operator.html & spread_operator.js
+
+
+# MODUL H 
+  1). Rest Parameter
+      - Rest Parameter mempresentasikan argument pada function dengan jumlah yang tidak 
+        terbatas menjadi sebuah array 
+        contoh pada file rest_parameter.html & rest_parameter.js
+  2). Asyncronous Javascript
+      # Asyncronous Javascript :
+        * Callback    : 
+         - function yang dikirimkan sebagai parameter ke function lain
+         - function yang di esekusi setelah function lain di jalankan
+         contoh pada folder callback_part1 & callback_part2 
+        * untuk menjalankan contoh ini masukan folder kedalam local server atau gunakan live server 
+           jika menggunakan vscode
+  3). Promise      
+    - Object yang mempresentasikan keberhasilan / kegagalan sebuah event yang Asyncronous
+      dimasa yang akan datang
+      // janji ( terpenuhi / ingkar )
+      // state / keadaan (( fullfilled / terpenuhi ) ( rejected / di ingkari ) ( pending / tertunda waktu tunggu ))
+      // callback / fungsi menjalankan :
+          (( resolve / terpenuhi ) ( reject / batal ) ( finally / waktu tunggu selesai) )
+      // aksi ( ( then / jika terpenuhi akan menjalankan resolve ) 
+                ( catch / jika tidak terpenihi akan menjalankan reject ) )
+  4). Fetch
+    - Adalah sebuah API pada javascript modern ( singkat )
+    - Sebuah method pada javascript untuk mengambil resources dari jaringan, 
+      dan mengembalikan promisse yang selesai ( fullfilled ) ketika ada response yang tersedia 
+      # penulisan fetch terdiri dari 2 parameter
+        fetch ( resources, init ) :
+        - resources => URL             : alamat dari sumber yang akan kita ambil
+        - resources => Request Object  : representasi permintaan sumber 
+        - init => Optional  : konfigurasi tambahan pada sebuah request dalam bentuk object 
+      # method pada init adalah POST & GET ( get scara default )
+        - header 
+        - body 
+        - mode 
+        - chache 
+        - raferrer 
+        - referrerPolicy 
+        - integrity 
+        - keepalive 
+        - signal
+      # hasil dari fetch adalah promise 
+      # response ( property )
+        - header - ok - redirected - status - statusText - type - url - body
+      # response ( method )
+        - clone()
+        - error()
+        - redirect()
+        - blob()
+        - formData()
+        - json()
+        - text()
+      Contoh pada folder fetch :
+  5). Fetch Refactor 
+      - fetct refactor adalah melakukan refactoring pada fetch Asyncronous
+        untuk melakukan refactoring pada fetch API maka perlu nmenggunakan Async & Await
+        contoh pada folder fetch refactoring 
+  6). Async & Await 
+      - Asyncronous function adalah sebuah function yang bekerja secara asyncronous 
+        ( melalui event loop ) yang menghasilkan ( implisit ) promise sebagai return valuenya,
+        tapi secara penulisan codenya menggunakan penulisan yang syncronous ( standart ).
+      - Sebuah Async function dapat memiliki keyword Await di dalamnya untuk memberhentikan 
+        sementara eksekusi fungsinya sambil menunggu promisenya selesai 
+      * Definisi :
+        - Fungsi yang berjalan Asyncronous 
+        - Menghasilkan ( implisit ) Promise 
+        - Cara penulisannya sama sperti Syncronous function ( function biasa )
+      contoh penulisan pada file Async Await 
+  7). Error Handling 
+      * Error handling untuk promise :
+        - .then()
+        - .catch()
+      * Error handling untuk Await
+        - try 
+        - catch 
+        
+
+
+
